@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME-2</title>
+    <style>
+        body {
+            margin: 0 .5% !important;
+            width: 99% !important;
+            position: static;
+            /* background-color: rgb(94, 94, 94); */
+            /* padding: 0 5px; */
+        }
+
+        * {
+            box-sizing: border-box !important;
+            padding: 0;
+            margin: 0;
+            /* scroll-behavior: smooth; */
+        }
+
+        .bannn {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 2rem;
+            background-color: aqua;
+            border: 2px solid red;
+
+        }
+
+        .inl {
+
+            min-width: 50%;
+            display: flex;
+            /* border: 2px solid red; */
+            font-size: 15px;
+
+        }
+
+        .inr {
+            padding-left: 50px;
+
+            min-width: 50%;
+            /* border: 2px solid red; */
+            display: flex;
+            font-size: 15px;
+        }
+
+        .bannn li {
+            list-style: none;
+            margin: 0 10px;
+            padding: 3px;
+            /* background-color: whitesmoke; */
+            text-decoration: none;
+            margin: 1px;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        .navtop {
+            /* margin-bottom: 5rem; */
+            max-width: 100%;
+            min-height: 5rem;
+            border: 1px solid darkred;
+            box-shadow: 1px 4px 7px 3px rgb(112, 112, 112);
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+
+
+        }
+
+        .navtop li {
+            margin: 5px 5px;
+            list-style: none;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 3px;
+            background-color: rgb(172, 172, 172);
+            transition: all .7s;
+        }
+
+
+        .logo {
+            min-width: 20%;
+            /* border: 2px solid indianred; */
+
+
+        }
+
+        .options {
+            min-width: 55%;
+            /* border: 2px solid indianred; */
+
+            display: flex;
+            flex-wrap: wrap;
+            transition: all .7s;
+        }
+
+        .options li h4:hover {
+            color: white;
+            scale: 1.1;
+        }
+
+        .navtop li:hover {
+
+            background-color: rgb(70, 70, 70);
+
+
+        }
+
+        .options li h4 {
+            color: rgb(0, 119, 255);
+        }
+
+        .search {
+            min-width: 25%;
+            display: flex;
+            /* height: 50%; */
+            border: 2px solid purple;
+
+        }
+
+        .bdy {
+            max-width: 100%;
+            border: 1px solid indigo;
+            color: rgb(149, 5, 252);
+            padding: 10px;
+
+        }
+
+        /* .bigbox { */
+        /* width: 99.5vw; */
+
+        /* display: grid; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(auto-fit, auto 1fr); */
+
+        /* grid-template-rows: 1fr 1fr; */
+        /* min-height: 20rem; */
+        /* border: 1px solid red; */
+        /* margin: 2% 0; */
+
+        /* } */
+
+        .bigbox {
+            margin: 40px 0px;
+            padding: 25px 5px;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* gap: 10px; */
+            border: 1px solid green;
+
+        }
+
+        .box {
+            background-color: transparent;
+            /* padding: 10px 10px; */
+            /* border: 1px solid green; */
+            min-width: 300px;
+            text-align: center;
+            align-content: center;
+            /* box-shadow: 0px 6px 6px rgb(112, 112, 112); */
+            /* border: 1px solid blue; */
+        }
+
+        .bx {
+            background-color: transparent;
+            /* padding: 10px 10px; */
+            /* border: 1px solid green; */
+
+            text-align: center;
+            align-content: center;
+        }
+
+
+        /* Adjust image sizes using CSS for responsiveness */
+        img {
+            max-width: 99%;
+            height: auto;
+        }
+
+        .fill-button {
+            /* margin: 100px; */
+            width: 150px;
+            height: 35px;
+            background-color: transparent;
+            border: none;
+            /* z-index: -1; */
+            color: white;
+
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            z-index: 9;
+        }
+
+        .fill-button:hover {
+            border: 1px solid rgb(48, 48, 255);
+            color: blue;
+
+        }
+
+        .fill-button::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 99, 212);
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.5s;
+            z-index: -1;
+        }
+
+        .fill-button:hover::before {
+            transform: scaleX(0);
+
+        }
+
+
+        #bb {
+            overflow: hidden;
+        }
+
+        #bb img {
+            transition: all .6s;
+        }
+
+        #bb img:hover {
+            scale: 1.3;
+        }
+
+        #bs {
+            overflow: hidden;
+        }
+
+        #bs img {
+            transition: all .8s;
+        }
+
+        #bs img:hover {
+            scale: 1.4;
+        }
+
+        .grid-outer {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(500px, 650px);
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 450px)); */
+            /* grid-template-rows: repeat(auto-fill, minmax(800px, 950px)); */
+
+            /* Adjust the width as needed */
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+            white-space: normal;
+        }
+
+        /* For Webkit-based browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+
+            width: 12px;
+            /* Set the width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(rgb(2, 202, 102), white, rgb(2, 202, 102));
+            /* Set the color of the thumb (the draggable part) */
+            border-radius: 6px;
+            /* Round the corners of the thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(rgb(19, 93, 252), white, rgb(19, 93, 252));
+            /* Change the thumb color on hover */
+        }
+
+        /* For Firefox */
+        div {
+            scrollbar-width: thin;
+            /* Display the scrollbar in Firefox */
+        }
+
+        div::-webkit-scrollbar-thumb {
+            background: linear-gradient(purple, white, purple);
+
+            /* Set the color of the thumb (the draggable part) */
+            border-radius: 6px;
+            /* Round the corners of the thumb */
+        }
+
+        div::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(red, white, red);
+
+            /* Change the thumb color on hover */
+        }
+
+        #cc {
+            transition: all .3s;
+
+        }
+
+        #cc:hover {
+            background: linear-gradient(rgb(226, 125, 2), rgb(252, 178, 40), rgb(226, 125, 2));
+            color: white;
+            scale: 1.03;
+
+        }
+
+
+
+        @media (max-width: 850px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(99%, 1fr));
+            }
+
+            img {
+                max-width: 720px;
+            }
+        }
+
+        
+        
+        
+        /* CSS */
+        @media (max-width: 768px) {
+            
+            .inl,
+            .inr {
+                float: none;
+                width: 99%;
+            }
+            
+            .bigbox {
+                /* width: 99.5% !important; */
+                width: 99.5%;
+                min-height: 30rem;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .box1 {
+                /* width: 99.5vw !important; */
+                width: 99.5%;
+                font-size: 15px;
+                
+            }
+            
+            img {
+                max-width: 750px;
+            }
+            
+            .box2 {
+                /* width: 99.5vw !important; */
+                width: 99.5%;
+                min-height: 20rem;
+            }
+            
+            .inb {
+                /* width: 100% !important; */
+                width: 100% ;
+            }
+            
+            .ina {
+                /* width: 100% !important; */
+                width: 100% ;
+            }
+            .search{
+                min-height: 22%;
+            }
+            
+        }
+
+        @media (max-width: 400px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+            }
+
+            img {
+                width: 350px;
+            }
+
+            .bx {
+                width: 100%;
+            }
+
+        }
+
+        </style>
+
+
+
+</head>
+
+<body>
+    <div class="bannn">
+        <div class="inl">
+            <li>
+                <a href=""><img src="logo.png" alt="" style="max-width: 100px;"></a> info@homeverse.com
+            </li>
+            <li>
+                <a href=""><img src="logo.png" alt="" style="max-width: 100px;"></a> 15/A, Nest Tower, NYC
+            </li>
+        </div>
+        <div class="inr">
+            <li>
+                <a href=""><img src="logo.png" alt="" style="max-width: 100px;"></a> info@homeverse.com
+            </li>
+            <li>
+                <a href=""><img src="logo.png" alt="" style="max-width: 100px;"></a> info@homeverse.com
+            </li>
+        </div>
+    </div>
+
+    <div class="navtop" id="nav">
+        <div class="logo" id="lg">
+            <a href=""><img src="logo.png" alt="" style="max-width: 280px;"></a>
+        </div>
+        <div class="options" id="opt">
+            <li><a href="">
+                    <h4>
+                        HOME
+                    </h4>
+                </a></li>
+            <li><a href="">
+                    <h4>
+                        ABOUT
+                    </h4>
+                </a></li>
+            <li><a href="">
+                    <h4>
+                        CONTACT-US
+                    </h4>
+                </a></li>
+
+            <li>
+                <a href="">
+                    <h4>
+                        MORE:
+                    </h4>
+                </a>
+            </li>
+            <li>
+                <select name="home category" style="border:solid rgb(33, 248, 115);">
+                    <option value="A">BUY NEW HOME</option>
+                    <option value="A">RENT</option>
+                    <option value="A">SELL</option>
+                    <option value="A">LEIZE</option>
+
+                </select>
+            </li>
+            <div class="search">
+                <input type="search"
+                    style="width: 100%; max-height:40px; border: 2px solid indigo; font-size: 16px; border-radius: 4px;">
+                <img src="search1.gif" alt="" style="max-width: 45px; ">
+            </div>
+        </div>
+    </div>
+
+    <div class="bigbox"
+        style="padding: 20px 30px; background: linear-gradient(rgb(37, 37, 37),rgb(189,     189, 189),rgb(37, 37, 37),rgb(189, 189, 189)); color: white; ">
+
+        <div class="box" style="padding: 70px 10px;">
+            <h3><a href=""><img src="icon-home.gif" alt="" style="max-height: 65px; max-width: 65px;"></a> Real Estate
+                Agency </h3><br>
+            <h1>
+                Find Your Dream House By Us
+            </h1><br>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus eligendi est incidunt fuga
+                suscipit, nobis porro cupiditate quaerat autem adipisci fugit expedita explicabo dolorem earum voluptate
+                iure! Necessitatibus, illo.</h2><br>
+            <button style="margin: 20px 0;" class="fill-button">
+                <div class="in">I'm Button</div>
+            </button>
+
+
+        </div>
+        <div class="box" style="padding: 70px 10px;">
+            <img src="hero-banner.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="bigbox"
+        style="padding: 20px 30px;background: linear-gradient(rgb(37, 37, 37),rgb(189, 189, 189),rgb(37, 37, 37),rgb(189, 189, 189)); color: white; ">
+
+        <div class="box" style="padding: 70px 10px;">
+
+            <h3><a href=""><img src="icon-home.gif" alt="" style="max-height: 65px; max-width: 65px;"></a>
+                Real Estate Agency </h3><br>
+            <h1>
+                Find Your Dream House By Us
+            </h1><br>
+            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, inventore eligendi, facilis a
+                repellendus atque soluta commodi veniam maxime, incidunt vel ab ad ipsam. Quasi asperiores quod, esse
+                recusandae nulla ut. Quisquam aut ratione culpa pariatur consectetur exercitationem dolor delectus.</h2>
+            <br>
+            <button style="margin: 20px 0;" class="fill-button">
+                <div class="in">I'm Button</div>
+            </button>
+
+        </div>
+        <div class="box" style="padding: 70px 10px; ">
+            <img src="about-banner-1.png" alt="">
+        </div>
+
+    </div>
+
+    <h1 style="text-align: center; color: indigo; width: 99%;">Our Main Focus </h1>
+    <div class="bigbox"
+        style="background: linear-gradient(rgb(37, 37, 37),rgb(189, 189, 189),rgb(37, 37, 37),rgb(189, 189, 189));">
+
+        <div class="box"
+            style="margin: 10px 20px; background-color: rgb(48, 48, 48); border: 1px solid navy; padding: 20px;">
+            <a href=""><img src="icon-home.gif" alt="" style="height: 55px; width: 55px;"></a>
+            <h1 style="color: white;"> Buy a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+
+
+        </div>
+
+        <div class="box"
+            style="margin: 10px 20px; background-color: rgb(48, 48, 48); border: 1px solid navy; padding: 20px;">
+            <a href=""><img src="icon-home.gif" alt="" style="height: 55px; width: 55px;"></a>
+            <h1 style="color: white;"> Rent a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+
+
+        </div>
+        <div class="box"
+            style="margin: 10px 20px; background-color: rgb(48, 48, 48); border: 1px solid navy; padding: 20px;">
+            <a href=""><img src="icon-home.gif" alt="" style="height: 55px; width: 55px;"></a>
+            <h1 style="color: white;"> Sell a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+        </div>
+
+    </div>
+
+
+    <h1 style="width: 99%; text-align: center; color: indigo; "> Featured Listings</h1>
+
+    <div class="grid-outer"
+        style="background: linear-gradient(rgb(37, 37, 37),rgb(189, 189, 189),rgb(37, 37, 37),rgb(189, 189, 189));">
+        <div class="grid-container" style="margin: 20px 0;">
+
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="property-1.jpg" alt="">
+
+                </div>
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+
+                    <img src="property-2.jpg" alt="">
+
+                </div>
+
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="property-3.jpg" alt="">
+                </div>
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="property-4.png" alt="">
+
+                </div>
+
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="blog-2.jpg" alt="">
+
+                </div>
+
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="blog-1.png" alt="">
+
+                </div>
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+            <div class="grid-item"
+                style="background-color: rgb(43, 43, 43);color: white; margin: 5px; border: 2px solid rgb(150, 0, 196);">
+                <div id="bb">
+                    <img src="blog-3.jpg" alt="">
+                </div>
+                <h2>$34,900/Month</h2>
+                <h3> New Apartment Nice View
+                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <h1 style="color: indigo; text-align: center; margin: 40px 0; background: linear-gradient(green,yellow,green);">
+        BUILDING AMENITIES</h1>
+
+    <div class="bigbox" style="background: linear-gradient(hotpink,yellow,green,blue,red); padding: 30px 0;">
+
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="carpark.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> PARKING SPACE</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="ab1.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3>SWIMMING POOL</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="private-security.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> PRIVAVE SECURITY</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="health-care.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> MEDICAL CENTRE</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="library-books.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> LIBRARY AREA</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="king-size bed.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> KING SIZE-BED</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="smarthome.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> SMART HOME</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+        <div class="box " id="cc"
+            style="background-color: #d8ffe7; margin: 5px; text-align: center; border: 1px solid purple; padding: 20px 10px">
+            <img src="playground.png" alt="" style="max-width: 120px; max-height: 120px;">
+            <h3> KID'S PLAYLAND</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi corrupti consequuntur dicta in
+                obcaecati eum cupiditate eos magni aperiam.</h4>
+            <h1 style="color: rgb(31, 31, 255);">&rarr;</h1>
+
+
+        </div>
+
+    </div>
+
+    <h1
+        style="margin-top: 60px; background: linear-gradient(orange,yellow,orange); text-align: center; color: rgb(206, 5, 206);">
+        Latest News Feeds
+    </h1>
+    <div class="bigbox"
+        style="background: linear-gradient(rgb(37, 37, 37),rgb(189, 189, 189),rgb(37, 37, 37),rgb(189, 189, 189));">
+
+        <div class="box" style="background-color: rgb(250, 253, 226); margin: 5px; border: 1px solid navy;">
+            <div id="bs">
+                <img src="blog-1.png" alt="">
+
+            </div>
+            <h1> Buy a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+
+
+        </div>
+
+        <div class="box" style="background-color: rgb(250, 253, 226); margin: 5px; border: 1px solid navy;">
+            <div id="bs">
+                <img src="blog-2.jpg" alt="">
+
+            </div>
+            <h1> Sell a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+        </div>
+
+        <div class="box" style="background-color: rgb(250, 253, 226); margin: 5px; border: 1px solid navy;">
+            <div id="bs">
+                <img src="blog-3.jpg" alt="">
+
+            </div>
+            <h1> Sell a home</h1>
+            <h3 style="color: darkcyan; margin: 20px 0;"> over 1 million+ homes for sale available on the website, we
+                can match you with a house you will want to call home.</h3>
+            <h2 style=" color: purple; margin: 20px 0; font-weight: bolder;">Find a Home &rarr;</h2>
+        </div>
+
+    </div>
+
+    <div class="bottom"
+        style="width: 100%; margin: 40px 0; border: 2px solid purple ; min-height: 100px;color: white; display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div class="inb" style="width: 60%;  background-color: darkred; padding: 10px;">
+            <h1>
+                LOOKING FOR A DREAM HOME??
+            </h1>
+            <h3>
+                We can help you realize your dream of a new home
+            </h3>
+        </div>
+
+        <div class="ina" style="width: 40%; padding: 0 10px; ">
+            <div class="btn" style="width: 160px; margin: 20px 0; height: 45px; border: 1px solid red; padding: 4px;">
+                <button class="fill-button">I'm Button</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bigbox" style="border: none; width: 100%;">
+
+        <div class="bx"
+            style="background-color: rgb(46, 46, 46); color:white; border: 1px solid red; text-align: start;padding: 10px; ">
+            <img src="logo.png" alt="" style="max-height: 35px; width: 185px; background-color: white;padding: 5px;">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repudiandae voluptas dolorem placeat
+                error, libero quo ut! Officiis, facere quasi.</h3>
+            <h3>Brooklyn, New York, United States</h3>
+            <h3>+0123-456789</h3>
+            <h3>contact@homeverse.com</h3>
+
+
+        </div>
+        <div class="bx"
+            style="background-color: rgb(46, 46, 46); color:white; border: 1px solid red; text-align: start;padding: 10px;">
+            <h3> About</h3>
+            <h3>Blog</h3>
+            <h3>All Products</h3>
+            <h3>Locations Map</h3>
+            <h3>FAQ</h3>
+            <h3>Contact us</h3>
+
+
+
+        </div>
+        <div class="bx"
+            style="background-color: rgb(46, 46, 46); color:white;  border: 1px solid red; text-align: start;padding: 10px;">
+            <h3> About</h3>
+            <h3>Blog</h3>
+            <h3>All Products</h3>
+            <h3>Locations Map</h3>
+            <h3>FAQ</h3>
+            <h3>Contact us</h3>
+
+
+        </div>
+        <div class="bx"
+            style="background-color: rgb(46, 46, 46); color:white; border: 1px solid red; text-align: start;padding: 10px;">
+            <h3> About</h3>
+            <h3>Blog</h3>
+            <h3>All Products</h3>
+            <h3>Locations Map</h3>
+            <h3>FAQ</h3>
+            <h3>Contact us</h3>
+
+
+        </div>
+
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const elementToFix = document.getElementById('nav');
+            const option = document.getElementById('opt');
+            const logo = document.getElementById('lg');
+            const scrollY = window.scrollY;
+
+            // Adjust the scroll threshold as needed
+            if (scrollY >= 500) {
+                logo.style.display = "none";
+                elementToFix.style.position = "fixed";
+                elementToFix.style.top = "0";
+                elementToFix.style.left = "0";
+
+            }
+            else {
+                logo.style.display = "block";
+                elementToFix.style.position = "static"; // or "relative" depending on your layout
+
+            }
+
+
+        });
+
+        // const button = document.getElementById('fill-button');
+        // const fill = button.querySelector('::before');
+
+        // button.addEventListener('mouseenter', () => {
+        //     fill.style.width = '100%';
+        //     button.style.backgroundColor = 'red';
+        // });
+
+        // button.addEventListener('mouseleave', () => {
+        //     fill.style.width = '0';
+        //     button.style.backgroundColor = 'orange';
+        // });
+
+
+
+    </script>
+
+</body>
+
+</html>
